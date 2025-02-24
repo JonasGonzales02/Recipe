@@ -1,4 +1,8 @@
-https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400
+/*
+CSS by Jonas Gonzales
+Date: 3/1/2025
+*/
+@import url("https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400");
 
 /*-------------------- CSS RESET --------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -48,10 +52,3 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-:root {
-    font-family: "Habibi", serif;
-    font-size: 1.25em;
-    --green:#06A816;
-    --orange:#E75D02;
-    --black:#000000;
-    --white:#ffffff;
