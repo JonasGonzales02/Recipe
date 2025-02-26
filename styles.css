@@ -52,3 +52,135 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+:root{
+    --black:#0d0d0d;
+    --white:#F2F2F2;
+    --ltblue:#7ABFBF;
+    --greyblue:rgba(122, 191, 191, .5);
+    --orange: #EB5428;
+    --bebas: "Bebas Neue" , sans-serif;
+    --Monst: "Monsterrat" , sans-serif;
+}
+body{
+    background-color: var(--greyblue);
+}
+main{
+    background-color: #F2F2F2;
+    max-width: 414px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+section{
+    background-color: #F2F2F2;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    margin-top: 30px;
+
+}
+#intro{
+    padding-top: 140px;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 25px;
+}
+#socials li, h1, h2, h3, nav a, nav span, menu li, dt, footer{
+    font-weight: normal;
+    font-family:var(--bebas);
+
+}
+#describe h2, #copyright h2, #navigation h2{
+    visibility: hidden;
+}
+footer p{
+    font-family: var(--bebas);
+}
+p, dd, li, nav, input, table{
+    font-size: 15px;
+    font-family: var(--Monst);
+}
+nav ul li{
+    text-align: center;
+}
+img{
+    max-width: 100%;
+}
+dt{
+    font-weight: 650;
+}
+.searchbox button{
+    position: relative;
+    background-color: #EB5428;
+    border: none;
+    left: -5px;
+    top: 10px;
+}
+.searchbox{
+    display: block;
+    position: relative;
+    margin: auto;
+    top: -3000px;
+    left: 15%;
+}
+.searchbox input{
+    width: 240px;
+    border: 3px solid var(--orange);
+    font-size: 15px;
+}
+.searchbox button svg{
+    stroke: #F2F2F2;
+}
+menu{
+    text-align: center;
+    padding-bottom: 30px;
+}
+menu li{
+    width: 25%;
+    display: inline-block
+}
+.MenuItems svg, .MenuItems span{
+    transition: background-color .5s, stroke .5s, color .5s;
+}
+.MenuItems span:hover, .MenuItems svg:hover{
+    background-color: #EB5428;
+    stroke: #F2F2F2;
+    color: #F2F2F2;
+}
+.MenuItems span{
+    display: block;
+    padding: 1px;
+    margin: 0;
+}
+.MenuItems a{
+    color: #EB5428;
+    text-decoration: none;
+}
+br{
+    margin-bottom: 10px;
+}
+#describe p{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+#steps h2{
+    text-align: center;
+    padding-top: 20px;
+}
+table{
+    line-height: 1.5rem;
+}
+
+
