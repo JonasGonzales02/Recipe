@@ -2,7 +2,7 @@
 CSS by Jonas Gonzales
 Date: 3/1/2025
 */
-@import url("https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
 
 /*-------------------- CSS RESET --------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -87,7 +87,7 @@ h1{
 
 }
 #intro{
-    padding-top: 140px;
+    padding-top: 120px;
 }
 h2{
     font-size: 30px;
@@ -130,7 +130,7 @@ dt{
     display: block;
     position: relative;
     margin: auto;
-    top: -3000px;
+    top: -3450px;
     left: 15%;
 }
 .searchbox input{
@@ -149,6 +149,11 @@ menu li{
     width: 25%;
     display: inline-block
 }
+.MenuItems span:hover, .MenuItems svg:hover{
+    background-color: #EB5428;
+    stroke: #F2F2F2;
+    color: #F2F2F2;
+}
 .MenuItems svg, .MenuItems span{
     transition: background-color .5s, stroke .5s, color .5s;
 }
@@ -161,10 +166,20 @@ menu li{
     display: block;
     padding: 1px;
     margin: 0;
+    text-decoration: none;
 }
 .MenuItems a{
     color: #EB5428;
     text-decoration: none;
+}
+.MenuItems a {
+    text-decoration: none;
+    color: #EB5428;
+}
+.MenuItems span{
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 br{
     margin-bottom: 10px;
@@ -175,12 +190,260 @@ br{
     padding-bottom: 3px;
     padding-top: 10px;
 }
-#steps h2{
+#process h2{
     text-align: center;
     padding-top: 20px;
 }
 table{
     line-height: 1.5rem;
+    margin: 10px;
+
+}
+.materials ul{
+    margin-left: 25px;
+}
+.materials ul li{
+    padding-left: 50px;
+    list-style-position: outside;
+    list-style-type: square;
+    line-height: 30px;
+}
+tbody th:first-of-type{
+    text-align: left;
+    font-weight: bold;
+}
+.steps ol{
+    margin-left: 10px;
+}
+.steps ol li{
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 20px;
+    line-height: 1.5rem;
+}
+#sides{
+    background-color: var(--ltblue);
+}
+#sides h2{
+    text-align: center;
+    padding: 15px;
+}
+.options img{
+    position: relative;
+    left: 15px;
+    max-width: 75%;
+    top: 15px;
+}
+.options{
+    padding:10px;
+}
+.content{
+    position: relative;
+    top: 15px;
+    flex-basis: 100%;
+}
+.rice, .guac, .tortilla, .salsa{
+    transition: background-color .5s;
+}
+.rice:hover, .guac:hover, .tortilla:hover, .salsa:hover{
+    background-color: var(--orange);
+}
+.content a{
+    color:#0d0d0d;
+    text-decoration: none;
+}
+.content a:hover{
+    color: #F2F2F2;
+}
+.content dd{
+    padding-top: 15px;
+}
+.content dt{
+    font-size: 1.5rem;
+    padding-top: 0px;
+}
+.content svg{
+    left: -10px;
+    position: relative;
+    padding-top: 10px;
+}
+.content p{
+    font-weight: bold;
+    padding-top: 10px;
+}
+.sticky{
+    position: fixed;
+    top:0;
+    z-index: 10;
+}
+#navigation{
+    height: 0;
+}
+.guac svg, .tortilla svg, .rice svg, .salsa svg{
+    fill: #EB5428;
+}
+.tortilla svg:last-of-type, .rice svg:last-of-type{
+    fill: var(--white);
+}
+nav{
+    z-index: 5;
+    top: 0;
+    max-width: 414px;
+    background-color: var(--white);
+    top: -2800px;
+    margin: auto;
+    position: absolute;
+    grid-area: nav;
+    min-width: 414px;
+    min-height: 70px;
+}
+nav span{
+    top: 10px;
+}
+nav ul li:last-of-type{
+    left: 320px;
+    position: absolute;
+    top: -20px;
+}
+#logo{
+    stroke: #EB5428;
+    position: absolute;
+    top: -20px;
+    left: 115px;
+}
+.menuli{
+    color: #EB5428;
+    top: 10px;
+    position: relative;
+    left: -68px;
 }
 
+.signin{
+    color: #0d0d0d;
+}
+nav ul li:last-of-type svg{
+    position: relative;
+    top: 15px;
+    stroke: var(--orange);
+}
+    nav ul{
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    list-style: none;
+}
+nav li img{
+    display:none;
 
+}
+nav ul li:first-of-type svg{
+    stroke: #F2F2F2;
+    background-color: #EB5428;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+nav li a{
+    padding: 20px;
+    text-decoration: none;
+    color: #EB5428;
+    display:block;
+
+}
+nav label{
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    left: 30px;
+}
+nav label svg{
+    display: block;
+
+}
+nav span{
+    display: block;
+    position: relative;
+}
+nav input{
+    display: none;
+
+}
+label span:before, label span:after {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+#socials{
+    margin-top: 20px;
+    max-width: 414px;
+    background-color: #F2F2F2;
+}
+.social ul{
+    text-align: center;
+}
+.social ul li{
+    display: inline-block;
+}
+.social .MenuItems{
+    margin: 20px;
+}
+nav h2{
+    height: 1px;
+    width: 1px;
+    visibility: hidden;
+}
+nav input:not(checked) ~ ul{
+    max-height: 0px;
+    transition: all 0.5s ease-in-out;
+}
+.copyright{
+    max-width: 414px;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+}
+.copyright img{
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    padding: 15px;
+}
+.copyright p{
+    margin: auto;
+    text-align: center;
+}
+
+/*---------Medium Query---------*/
+@media screen and ( min-width: 768px){
+
+    main{
+        max-width: 768px;
+    }
+    section{
+        max-width: 768px;
+    }
+    .signin{
+        position: relative;
+        top: 10px;
+    }
+    nav{
+        margin: auto;
+        top: -50px;
+        position: relative;
+        max-width: 768px;
+        min-height: 200px;
+        min-width: 768px;
+
+    }
+    .searchbox{
+        display: block;
+        z-index: 100;
+        margin: auto;
+        top: -3200px;
+        
+    }
+
+}
