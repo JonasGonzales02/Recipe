@@ -303,7 +303,7 @@ tbody th:first-of-type{
 }
 nav{
     z-index: 5;
-    top: 10;
+    top: 10px;
     max-width: 414px;
     background-color: var(--white);
     top: -2800px;
@@ -760,7 +760,7 @@ nav input:checked ~ ul {
     }
     .salsa, .guac, .tortilla, .rice{
         display: grid;
-        grid-template-columns: 1fr 1fr, 1fr, 1fr;
+        grid-template-columns: 1fr 1fr 1fr, 1fr;
     }
     .options{
         display: grid;
