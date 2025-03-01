@@ -60,7 +60,7 @@ table {
     --greyblue:rgba(122, 191, 191, .5);
     --orange: #EB5428;
     --bebas: "Bebas Neue" , sans-serif;
-    --Monst: "Monsterrat" , sans-serif;
+    --Monst: "Montserrat" , sans-serif;
 }
 body{
     background-color: var(--greyblue);
@@ -68,15 +68,14 @@ body{
 main{
     background-color: #F2F2F2;
     max-width: 414px;
-    margin: auto;
-    width: 100%;
-    position: relative;
-    top: 0px;
+    
 }
 section{
-    background-color: #F2F2F2;
+    background-color: white;
     margin-right: auto;
     margin-left: auto;
+    max-width: 414px;
+
 
 }
 h1{
@@ -84,13 +83,25 @@ h1{
     font-size: 40px;
     position: relative;
     margin-top: 30px;
+    top:-75px;
 
 }
+main{
+    margin: auto;
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
 #intro{
-    padding-top: 120px;
+    padding-top: 140px;
 }
 h2{
     font-size: 30px;
+}
+#instructions h2{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 h3{
     font-size: 25px;
@@ -130,7 +141,7 @@ dt{
     display: block;
     position: relative;
     margin: auto;
-    top: -3450px;
+    top: -29px;
     left: 15%;
 }
 .searchbox input{
@@ -143,7 +154,7 @@ dt{
 }
 menu{
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 menu li{
     width: 25%;
@@ -162,7 +173,7 @@ menu li{
     stroke: #F2F2F2;
     color: #F2F2F2;
 }
-.MenuItems span{
+.MenuItems span {
     display: block;
     padding: 1px;
     margin: 0;
@@ -203,7 +214,7 @@ table{
     margin-left: 25px;
 }
 .materials ul li{
-    padding-left: 50px;
+    padding-left: 20px;
     list-style-position: outside;
     list-style-type: square;
     line-height: 30px;
@@ -220,6 +231,9 @@ tbody th:first-of-type{
     padding-left: 20px;
     margin: 20px;
     line-height: 1.5rem;
+}
+.steps{
+    padding: 50px;
 }
 #sides{
     background-color: var(--ltblue);
@@ -244,6 +258,8 @@ tbody th:first-of-type{
 }
 .rice, .guac, .tortilla, .salsa{
     transition: background-color .5s;
+    display: flex;
+    padding-bottom: 20px;
 }
 .rice:hover, .guac:hover, .tortilla:hover, .salsa:hover{
     background-color: var(--orange);
@@ -287,7 +303,7 @@ tbody th:first-of-type{
 }
 nav{
     z-index: 5;
-    top: 0;
+    top: 10;
     max-width: 414px;
     background-color: var(--white);
     top: -2800px;
@@ -317,8 +333,12 @@ nav ul li:last-of-type{
     position: relative;
     left: -68px;
 }
+.menuli:hover{
+    background-color: #EB5428;
+    color: white;
+}
 
-.signin{
+.sign-in{
     color: #0d0d0d;
 }
 nav ul li:last-of-type svg{
@@ -330,7 +350,7 @@ nav ul li:last-of-type svg{
     padding: 0;
     margin: 0;
     max-height: 0;
-    overflow: hidden;
+    
     list-style: none;
 }
 nav li img{
@@ -340,16 +360,19 @@ nav li img{
 nav ul li:first-of-type svg{
     stroke: #F2F2F2;
     background-color: #EB5428;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: -50px;
+    margin-left: -200px;
 }
 nav li a{
     padding: 20px;
     text-decoration: none;
     color: #EB5428;
     display:block;
+    
 
 }
 nav label{
@@ -375,6 +398,7 @@ label span:before, label span:after {
     height: 100%;
     position: absolute;
     width: 100%;
+    content: '';
 }
 #socials{
     margin-top: 10px;
@@ -391,13 +415,21 @@ label span:before, label span:after {
 .social .MenuItems{
     margin: 20px;
 }
+#socials h2{
+    display: none;
+}
+
 nav h2{
     height: 1px;
     width: 1px;
     visibility: hidden;
 }
-nav input:not(checked) ~ ul{
+nav input:not(:checked) ~ ul{
     max-height: 0px;
+    transition: all 0.5s ease-in-out;
+}
+nav input:checked ~ ul {
+    max-height: 630px;
     transition: all 0.5s ease-in-out;
 }
 .copyright{
@@ -418,7 +450,7 @@ nav input:not(checked) ~ ul{
 }
 
 /*---------Medium Query---------*/
-@media screen and ( min-width: 768px){
+@media screen and ( min-width: 768px) {
 
     main{
         max-width: 768px;
@@ -426,7 +458,7 @@ nav input:not(checked) ~ ul{
     section{
         max-width: 768px;
     }
-    .signin{
+    .sign-in{
         position: relative;
         top: 10px;
     }
@@ -461,9 +493,6 @@ nav input:not(checked) ~ ul{
         visibility: hidden;
     }
     
-    #logo svg{
-        padding-top: 20px;
-    }
     #intro{
         padding-top: 200px;
     }
@@ -521,12 +550,11 @@ nav input:not(checked) ~ ul{
         left: -70px;
         top: 15px;
         visibility: visible;
-        color: #EB5428;
     }
 
     .options{
      display: grid;
-        grid-template-columns: 1 fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     table{
         margin: auto;
@@ -534,10 +562,11 @@ nav input:not(checked) ~ ul{
     .materials{
         display: grid;
         grid-template-columns: 250px 1fr;
+        padding-top: 40px;
     }
     #socials{
         position: relative;
-        top: 110px;
+        top: 120px;
         left: 170px;
     }
     #copyright, .social{
@@ -596,18 +625,17 @@ nav input:not(checked) ~ ul{
         min-width: 1280px;
         min-height: 80px;
         top: -50px;
+        overflow: hidden;
     }
     .searchbox{
         display: block;
-        z-index: 100;
-        position: sticky;
-        top: 45px;
-    }
-    .searchbox{
+       z-index: 500;
         position: initial;
+        top: 400px;
     }
 
-    .signin{
+
+    .sign-in{
     position: relative;
     top:60px;
     left: 500px;
@@ -647,25 +675,121 @@ nav input:not(checked) ~ ul{
         left: 0px;
     }
     #logo svg{
-        padding: 32px;
+        padding: 25px;
     }
     #logo{
         position: relative;
-        top: 0px;
-        left: -40px;
+        top: 50px;
+        left: 80px;
         z-index: 500;
     }
     .menuli{
         position: relative;
-        top: 120px;
+        top: 50px;
+        left: 63px;
+    
+    
+
     }
     #search{
         position: relative;
         margin: auto;
         z-index: 4;
-        top: -1940px;
+        top: -2560px;
         left: 500px;
     }
+    menu{
+        display: block;
+        background-color: white;
+        height: 700px;
+        width: 50%;
 
+    }
+    #intro h1{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px;
+        position: initial;
+    }
+    menu li{
+        display: grid;
+        position: relative;
+        right: 250px;
+        padding-top: 20px;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+    #describe{
+        max-height: 300px;
+    }
+    #describe img{
+        left: 140px;
+        width: 40%;
+        top: -650px;
+        position: relative;
+    }
+    #describe p{
+        position: relative;
+        top: -1450px;
+        left: 675px;
+        width: 45%;
+        line-height: 2.5rem;
+    }
+    #process{
+        position: relative;
+        top: -200px;
+        max-height: 320px;
+    }
+    .info{
+        background-color: var(--black);
+        padding-bottom: 20px;
+    }
+    .info table, .info h2{
+        color: #F2F2F2;
+    }
+    .info table tbody{
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .info table tr *{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .salsa, .guac, .tortilla, .rice{
+        display: grid;
+        grid-template-columns: 1fr 1fr, 1fr, 1fr;
+    }
+    .options{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
+    }
+    .content{
+        padding: 10px 20px;
+    }
+    .content, image{
+        left: 27px;
+        position: relative;
+    }
+    .social{
+        position: relative;
+        left: 240px;
+
+    }
+    .copyright{
+        display: inline;
+    }
+
+    .copyright img{
+        width: 20%;
+    }
+    
+    .copyright p{
+        position: relative;
+        top: -230px;
+        left: -285px;
+    }
 }
